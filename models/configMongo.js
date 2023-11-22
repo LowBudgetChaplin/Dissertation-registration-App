@@ -1,21 +1,21 @@
-const express =  require('express');
-const mongoose = require('mongoose');
-// import { Express } from 'express';
-// import { Mongoose } from 'mongoose';
+// const express =  require('express');
+// const mongoose = require('mongoose');
+// // import { Express } from 'express';
+// // import { Mongoose } from 'mongoose';
 
-const url = "mongodb://localhost:27017";
-const port = 8080;
-const app = express();
-mongoose.connect(url, {}).then(result => console.log("database connected"))
-        .catch(err => console.log(err));
+// const url = "mongodb://localhost:27017";
+// const port = 8080;
+// const app = express();
+// mongoose.connect(url, {}).then(result => console.log("database connected"))
+//         .catch(err => console.log(err));
 
-app.get('/', (req, res)=>{
-        res.send("<h1>Da ma tu esti</h1>"); //proba de get method
-});
+// app.get('/', (req, res)=>{
+//         res.send("<h1>Da ma tu esti</h1>"); //proba de get method
+// });
 
-app.listen(port, ()=>{
-        console.log("Server is listening to port: " + port);
-});
+// app.listen(port, ()=>{
+//         console.log("Server is listening to port: " + port);
+// });
 
 
 
