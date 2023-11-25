@@ -1,18 +1,18 @@
 import mongoose, { Schema } from "mongoose";
+import {Student} from "./studentModel.js";
+import {ObjectId} from "mongodb";
 
 const teacherSchema = new mongoose.Schema(
     {
         firstName: {
 
                 type: String,
-                errorMessage: 'Invalid firstName',
                 required: true
         },
 
         lastName: {
 
                 type: String,
-                errorMEssage: 'Invalid lastName',
                 required: true
         },
         email: {
@@ -20,19 +20,19 @@ const teacherSchema = new mongoose.Schema(
                 type: String,
                 required: true,
                 isEmail: true,
-                errorMessage: 'Invalid email',
-                match: [/.+\@.+\..+/, "incorrect email"]
+                match: [/.+\@.+\..+/, "incorrect email"],
+                unique: true
         },
 
         password: {
 
                 type: String,
-                errorMessage: 'Invalid password',
                 required: true
         },
 
         students: [{
-            type: Schema.Types.ObjectId, ref: "Student"
+            type: mongoose.Types.ObjectId, ref: "Student",
+            max: 12,
         }],
     },
     {

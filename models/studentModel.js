@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export const studentSchema = new mongoose.Schema(
+const studentSchema = new mongoose.Schema(
     {
         firstName: {
 
@@ -17,13 +17,20 @@ export const studentSchema = new mongoose.Schema(
 
             type: String,
             required: true,
-            match: [/.+\@.+\..+/, "incorrect email"]
+            match: [/.+\@.+\..+/, "incorrect email"],
+            unique: true
     },
     password: {
 
             type: String,
             required: true
     },
+    teacher: {
+        type: mongoose.Types.ObjectId, ref: "Teacher",
+    }
+},
+{
+        timestamps: true
 }
 );
 

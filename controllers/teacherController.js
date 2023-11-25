@@ -1,10 +1,30 @@
 import {Teacher} from "../models/teacherModel.js";
 import {Student} from "../models/studentModel.js";
 import {User} from "../models/userModel.js";
+import mongoose from "mongoose";
+
+const addStudents = async (req, res) => {
+    const student = new mongoose.Types.ObjectId(req.params.student);
+    console.log(student);
+    const {email} = req.params;
+    const teacher = await Teacher.findOne({"email": email}).exec();
+    if (!teacher.students.includes(student))
+    {
+        teacher.students.push(student);
+    }
+    teacher.save();
+
+    const teacherUpdated = await Teacher.findOne({"email": email})
+    .populate("students",'firstName lastName email');
+
+    res.status(200).send({Teacher: teacherUpdated});
+
+};
 
 const getTeachers = async (req, res) => {
-    const teachers =  await Teacher.find({});
-    res.status(200).send({records: teachers});
+    const teachers =  await Teacher.find({})
+    .populate("students", "firstName lastName email");
+    res.status(200).send({Teachers: teachers});
 };
 
 const createTeacher = async (req, res) => {
@@ -83,5 +103,6 @@ export {
     getTeachersByEmail,
     createTeacher,
     updateTeacher,
-    removeTeacher
+    removeTeacher,
+    addStudents
 }

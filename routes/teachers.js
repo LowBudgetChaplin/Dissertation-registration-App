@@ -13,3 +13,5 @@ router.post("/", teacherController.createTeacher);
 router.put("/:email", teacherController.updateTeacher);
 
 router.delete("/:email", teacherController.removeTeacher);
+
+router.get("/:email/:student", teacherController.addStudents);
