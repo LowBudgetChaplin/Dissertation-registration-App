@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+*{
+	font-family: "Arvo", cursive;
+}
+
+.navContainer {
+	width: 100vw;
+	height: 10vh;
+	background-color: #3887BE;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navTitle {
+	margin-left: 1vh;
+	font-size: larger;
+	font-weight: bold;
+}
+
+.navButtons {
+	display: flex;
+	gap: 2vw;
+	margin-right: 4vh;
+	font-weight: bold;
+	user-select: none;
+}
+
+
+.logout:hover {
+	width: 6vh;
+	height: 3vh;
+	background-color: #200E3A;
+	color: #52D3D8;
+	transform: translateY(-3px);
+	border-radius: 10px;
+}
