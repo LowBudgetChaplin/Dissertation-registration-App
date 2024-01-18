@@ -1,0 +1,44 @@
+.homeContainer{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeDetails{
+    width: 100vw;
+    background-color: #3887BE;
+    height: 10vh;
+}
+
+.homeButtons{
+    width: 100vw;
+    height: 6vh;
+    background-color: #3887BE;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.homePhases{
+    width: 100vw;
+    height: 100vh;
+    background-color: #52D3D8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.phase{
+    cursor: pointer;
+    width: 33vw;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phase:hover{
+    background-color: #52D3D8;
+}

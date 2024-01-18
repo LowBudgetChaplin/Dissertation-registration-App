@@ -1,0 +1,22 @@
+.phaseOneContainer{
+    width: 80vw;
+    height: 80vh;
+}
+
+.dropdownTeachers{
+    width: 20vw;
+    height: 4vh;
+    font-size: 6vh;
+}
+
+.submitBtn{
+    width: 10vw;
+    height: 4vh;
+    background-color: #200E3A;
+    color: #52D3D8;
+
+}
+
+.textPhaseOne{
+    font-size: 2vh;
+}

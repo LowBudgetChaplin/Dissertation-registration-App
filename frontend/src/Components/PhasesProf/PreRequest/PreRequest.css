@@ -1,0 +1,41 @@
+.prereqContainer{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.prereqAccept{
+    height: 2rem;
+    width: 3.5rem;
+    background-color: green;
+    color: white;
+}
+
+.prereqAccept:hover{
+    background-color: #200E3A;
+}
+
+.prereqReject{
+    height: 2rem;
+    width: 3.1rem;
+    background-color: red;
+    color: white;
+}
+
+.prereqReject:hover{
+    background-color: #200E3A;
+}
+
+.acceptanceButtons{
+    display: flex;
+    gap: 2vw;
+}
+
+.pendingControls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1vh;
+}

@@ -1,0 +1,56 @@
+.homeProfPhases{
+    display: flex;
+    overflow: hidden;
+}
+
+.homePhaseContainer{
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 34vw;
+}
+
+#modalContainer{
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    display: none;
+    z-index: 2;
+}
+
+#modalSession{
+    border-radius: 10px;
+    width: 30vw;
+    height: 30vh;
+    background-color: #200E3A;
+    /* color: #52D3D8; */
+    color: white;
+    position: absolute;
+    top:10%;
+    left: 35vw;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.createSessionBtn{
+    background-color: #200E3A;
+    /* color: #52D3D8; */
+    color: white;
+    height: 4vh;
+    width: 10vw;
+    border: none;
+}
+
+.createSessionBtn:hover{
+    /* transform: translateY(-0.5vh); */
+}
+
+.phaseProf{
+    width: 33vw;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    color: #200E3A;
+}
+
