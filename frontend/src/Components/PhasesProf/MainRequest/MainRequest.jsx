@@ -75,7 +75,7 @@ function MainRequest({ mainReqId, status, profFile, studFile }) {
 						Authorization: `Bearer ${localStorage.getItem('token')}`,
 					},
 				}
-			.then(() => { document.getElementById('acceptMainReqButton').style.display = 'none';})
+				
 			)
 			.catch((err) => {
 				toast.error(err.response.data);
