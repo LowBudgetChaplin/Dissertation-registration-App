@@ -1,1 +1,1 @@
-# WebLabProject - aplicatie de incarcare a lucrarii de licenta
+# WebLabProject - web platform for uploading the bachelor's thesis
